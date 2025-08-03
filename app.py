@@ -8,10 +8,10 @@ app = Flask(__name__)
 HTML_FORM = '''
 <!doctype html>
 <title>Upload Excel</title>
-<h2>Upload file result.xlsx</h2>
+<h2>Tải file lên đi bà Lài</h2>
 <form method=post enctype=multipart/form-data>
   <input type=file name=file>
-  <input type=submit value="Upload và xử lý">
+  <input type=submit value="Bấm vô đây">
 </form>
 '''
 
