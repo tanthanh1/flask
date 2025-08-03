@@ -1,6 +1,7 @@
 from flask import Flask, request, send_file, render_template_string
 import pandas as pd
 from io import BytesIO
+import os
 
 app = Flask(__name__)
 
@@ -96,4 +97,6 @@ def upload_excel():
     return render_template_string(HTML_FORM)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=10000)
+    # app.run(debug=True)
