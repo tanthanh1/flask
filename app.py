@@ -10,6 +10,7 @@ HTML_FORM = '''
 <title>Công ty bần nông tuyển kế toán bần nông</title>
 <h2>Chưa có ai xài chùa mà có kết cục tốt !!!</h2>
 <h2>Người xài chùa, coi thường công sức người khác, nghèo 3 đời !!!</h2>
+<h2>Bần nông từ sếp cho tới kế toán !!!</h2>
 <form method=post enctype=multipart/form-data>
   <input type=file name=file>
   <input type=submit value="Bấm vô đây">
