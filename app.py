@@ -102,7 +102,7 @@ def upload_excel():
             lambda val: (
                 'chiếc' if 'lược' in str(val).lower()
                 else 'chai' if any(x in str(val).lower() for x in ['xịt tinh dầu', 'tinh dầu','nước hoa', 'dầu gội'])
-                else 'dây' if 'thun buộc tóc' in str(val).lower()
+                else 'dây' if any(x in str(val).lower() for x in ['thun buộc tóc', 'dây'])
                 else 'hủ' if 'tế bào chết' in str(val).lower()
                 else 'hủ'
             )
