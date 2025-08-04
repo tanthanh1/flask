@@ -88,9 +88,12 @@ def upload_excel():
 
         df_moi = pd.DataFrame()
         df_moi['STT'] = range(1, len(df) + 1)
-        df_moi['IDChungTu/MaBill'] = df['Order ID'].astype(str)
-        df_moi['TenHangHoaDichVu'] = df['Product Name']
-        df_moi['SoLuong'] = df['Quantity'].astype(int)
+        # df_moi['IDChungTu/MaBill'] = df['Order ID'].astype(str)
+        df_moi['IDChungTu/MaBill'] = df['ID ĐƠN HÀNG'].astype(str)
+        df_moi['TenHangHoaDichVu'] = df['TÊN SẢN PHẨM']
+        # df_moi['TenHangHoaDichVu'] = df['Product Name']
+        # df_moi['SoLuong'] = df['Quantity'].astype(int)
+        df_moi['SoLuong'] = df['SỐ LƯỢNG'].astype(int)
        
 
 
@@ -105,7 +108,7 @@ def upload_excel():
             )
         )
 
-        df_moi['SoLuong'] = df['Quantity']
+    #    df_moi['SoLuong'] = df['Quantity']
         df_moi['ThanhTien'] = (df['SKU Subtotal After Discount'] / 1.08).round(0).astype(int)
         df_moi['ThueSuat'] = 0.08
         df_moi['TienThueGTGT'] = (df_moi['ThanhTien'] * 0.08).round(0).astype(int)
