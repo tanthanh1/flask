@@ -26,12 +26,12 @@ def upload_excel():
         df = pd.read_excel(f)
         
 
-        df = df.drop(index=0)
+        #df = df_temp.drop(index=0)
 
-        # # Reset lại chỉ số hàng (nếu muốn)
-        df = df.reset_index(drop=True)
+        # Reset lại chỉ số hàng (nếu muốn)
+        # df = df.reset_index(drop=True)
 
-        print(df.head(3))
+        print(df)
     
         df['SKU Subtotal After Discount'] = (
             df['SKU Subtotal After Discount']
