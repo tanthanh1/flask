@@ -7,14 +7,60 @@ app = Flask(__name__)
 
 HTML_FORM = '''
 <!doctype html>
-<title>Công ty bần nông tuyển kế toán bần nông</title>
-<h2>Chưa có ai xài chùa mà có kết cục tốt !!!</h2>
+<head>
+    <meta charset="UTF-8">
+    <title>Công ty bần nông tuyển kế toán bần nông</title>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            padding: 40px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        h2,h1 {
+            margin-bottom: 30px;
+            color: #dc3545;
+        }
+        input[type=file] {
+            margin-bottom: 20px;
+        }
+        input[type=submit] {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #198754;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        input[type=submit]:hover {
+            background-color: #157347;
+        }
+    </style>
+</head>
+<body class="container">
+<div>
+
+<h1>Chưa có ai xài chùa mà có kết cục tốt !!!</h1>
 <h2>Người xài chùa, coi thường công sức người khác, nghèo 3 đời !!!</h2>
 <h2>Bần nông từ sếp cho tới kế toán !!!</h2>
 <form method=post enctype=multipart/form-data>
   <input type=file name=file>
   <input type=submit value="Bấm vô đây">
 </form>
+</div>
+</body>
 '''
 
 @app.route('/', methods=['GET', 'POST'])
